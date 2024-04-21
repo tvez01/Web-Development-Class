@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>Music Player </title>
+  <style>
+    body {
+       font-family: 'Arial', sans-serif; 
+       background:url(images/background.jpg);
+       background-size:cover;
+    }
+
+    #cp {
+      text-align: center;
+      padding: 20px;
+      margin:100 auto;
+      width: fit-content;
+    }
+
+    #cp button {
+      margin: 5px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      width: 100px;
+      border-radius: 10px; 
+      background-color: #53d769; 
+      color: white; 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+      transition: transform 0.3s, background-color 0.3s; /* Smooth transitions for interactions */
+    }
+
+    #cp button:hover {
+      background-color: #45bb58; 
+      transform: scale(1.05); 
+    }
+
+    #message {
+      color: #4A90E2; 
+      font-size: 18px;
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+  <script src="//code.jquery.com/jquery.min.js"></script>
+  <script src="app.js"></script>
+</head>
+<body>
+  <!-- Control Panel will go here -->
+  <div id="cp">
+    <button id="play">Play</button>
+    <button id="stop">Stop</button>
+    <button id="pause">Pause</button>
+    <button id="mute">Mute</button>
+    <button id="unmute">Unmute</button>
+    <button id="volU">Volume Up</button>
+    <button id="volD">Volume Down</button>
+  </div>
+  <!-- Message Bar -->
+    <p id="message">Waiting</p>
+  <!-- Audio player will go here -->
+  <audio id="player">
+    <source src="music/song1.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
