@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  background-image: url('bg.jpg'); /* Add your image path here */
+  background-size: cover; /* Cover the entire area of the body */
+  background-position: center; /* Center the image in the body */
+}
+
+.header,
+.content-section,
+.left-nav,
+.right-nav,
+.footer {
+  width: 100%;
+  padding: 50px 10px 10px 10px;
+}
+
+/* Remove the global opacity setting and apply it only to the content background if needed */
+.content-section {
+  background-color: rgba(176, 196, 222, 0.8); /* lightsteelblue with opacity */
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+@media (min-width: 800px) {
+
+  .header,
+  .footer {
+    width: 100%;
+  }
+
+  .content-section {
+    width: calc(70% - 300px); /* Adjusted width considering padding */
+    margin: 0 150px; /* Centered margin */
+    padding: 10px; /* Adjusted padding */
+    background-color: transparent; /* Content area background transparent or adjust opacity as needed */
+  }
+
+  .left-nav,
+  .right-nav {
+    width: 15%;
+    padding: 10px;
+    background-color: rgba(173, 216, 230, 0.8); /* Adjust colors and opacity as needed */
+  }
+
+  .left-nav {
+    background-color: rgba(173, 216, 230, 0.8); /* lightblue with opacity */
+  }
+
+  .right-nav {
+    background-color: rgba(255, 160, 122, 0.8); /* lightsalmon with opacity */
+  }
+}
